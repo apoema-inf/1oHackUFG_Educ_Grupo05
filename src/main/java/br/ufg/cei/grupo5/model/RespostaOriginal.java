@@ -30,6 +30,9 @@ public class RespostaOriginal extends BasicModel {
   @Column
   private String observacao;
 
+  @Column
+  private Boolean aprovada;
+
 
 
 }

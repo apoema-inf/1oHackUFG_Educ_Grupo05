@@ -27,4 +27,7 @@ public class RespostaNormalizada extends BasicModel {
   @JoinColumn(name = "pergunta_normalizada_id")
   private PerguntaNormalizada perguntaNormalizada;
 
+  @Column
+  private Boolean aprovado;
+
 }
