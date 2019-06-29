@@ -16,9 +16,9 @@ import lombok.Data;
  * @author Iago Bruno
  * @since 1.0
  */
+@Data
 @Entity
 @Table(name = "usuarios")
-@Data
 public class Usuario extends BasicModel {
 
   @Column

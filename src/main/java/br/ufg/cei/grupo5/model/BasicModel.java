@@ -5,11 +5,13 @@ import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
 import javax.persistence.MappedSuperclass;
+import lombok.Data;
 
 /**
  * @author Iago Bruno
  * @since 1.0
  */
+@Data
 @MappedSuperclass
 public abstract class BasicModel implements Serializable {
 

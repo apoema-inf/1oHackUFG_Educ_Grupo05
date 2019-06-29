@@ -13,25 +13,23 @@ import lombok.Data;
  */
 @Data
 @Entity
-@Table(name = "perguntas_normalizadas")
-public class PerguntaNormalizada extends BasicModel {
+@Table(name = "respostas_originais")
+public class RespostaOriginal extends BasicModel {
 
   @Column
-  private String titulo;
+  private String resposta;
 
-  @Column
-  private String pergunta;
+  @ManyToOne
+  @JoinColumn(name = "aluno_id")
+  private Usuario aluno;
 
   @ManyToOne
   @JoinColumn(name = "professor_id")
   private Usuario professor;
 
-  @ManyToOne
-  @JoinColumn(name = "pergunta_original_id")
-  private PerguntaOriginal perguntaOriginal;
+  @Column
+  private String observacao;
 
-  @ManyToOne
-  @JoinColumn(name = "resposta_normalizada_id")
-  private RespostaNormalizada respostaNormalizada;
+
 
 }
