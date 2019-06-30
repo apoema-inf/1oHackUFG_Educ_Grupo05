@@ -1,54 +1,130 @@
 <!doctype html>
 <html lang="pt-BR"
-      xmlns:th="http://www.thymeleaf.org"
-      xmlns:layout="http://www.ultraq.net.nz/thymeleaf/layout">
+	  xmlns:th="http://www.thymeleaf.org"
+	  xmlns:layout="http://www.ultraq.net.nz/thymeleaf/layout">
 
 <head>
-  <meta charset="utf-8"/>
-  <meta http-equiv="X-UA-Compatible" content="IE=edge"/>
-  <meta name="description" content="Perguntaí"/>
-  <meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0"/>
-  <title>Perguntaí - Login</title>
+	<meta charset="utf-8"/>
+	<meta http-equiv="X-UA-Compatible" content="IE=edge"/>
+	<meta name="description" content="Perguntaí"/>
+	<meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0"/>
+	<title>Perguntaí - Login</title>
 
-  <!-- Page styles -->
-  <link rel="stylesheet"
-        href="https://fonts.googleapis.com/css?family=Roboto:regular,bold,italic,thin,light,bolditalic,black,medium&amp;lang=en"/>
-  <link href="https://fonts.googleapis.com/css?family=Anton" rel="stylesheet"/>
-  <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons"/>
-  <link th:href="@{/css/material.min.css}" rel="stylesheet"/>
-  <link th:href="@{/css/styles.css}" rel="stylesheet"/>
+	<!-- Page styles -->
+	<link rel="stylesheet"
+		  href="https://fonts.googleapis.com/css?family=Roboto:regular,bold,italic,thin,light,bolditalic,black,medium&amp;lang=en"/>
+	<link href="https://fonts.googleapis.com/css?family=Anton" rel="stylesheet"/>
+	<link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons"/>
+	<link th:href="@{/css/material.min.css}" rel="stylesheet"/>
+	<link th:href="@{/css/styles.css}" rel="stylesheet"/>
+	<link th:href="@{css/main.css}" rel="stylesheet"/>
+	<link th:href="@{css/util.css}" rel="stylesheet"/>
+
+
+
 </head>
 <body>
 
-<div class="mdl-layout mdl-js-layout mdl-color--grey-100">
-  <form action="login" method="POST">
-    <main class="mdl-layout__content">
-      <div class="mdl-card mdl-shadow--6dp">
-        <div class="mdl-card__title mdl-color--primary mdl-color-text--white">
-          <h2 class="mdl-card__title-text">Perguntaí</h2>
-        </div>
-        <div class="mdl-card__supporting-text">
-          <div class="mdl-textfield mdl-js-textfield">
-            <input class="mdl-textfield__input" type="text" id="username" name="username"/>
-            <label class="mdl-textfield__label" for="username">Usuário</label>
-          </div>
-          <div class="mdl-textfield mdl-js-textfield">
-            <input class="mdl-textfield__input" type="password" id="password" name="password"/>
-            <label class="mdl-textfield__label" for="password">Senha</label>
-          </div>
 
-          <input type="hidden" th:name="${_csrf.parameterName}" th:value="${_csrf.token}"/>
-        </div>
-        <div class="mdl-card__actions mdl-card--border">
-          <button type="submit" class="mdl-button mdl-button--colored mdl-js-button mdl-js-ripple-effect">Entrar
-          </button>
-        </div>
-      </div>
-    </main>
-  </form>
+
+<div class="mdl-layout mdl-js-layout mdl-layout--fixed-header">
+
+	<div class="perguntai-header mdl-layout__header mdl-layout__header--waterfall">
+		<div class="mdl-layout__header-row">
+          <span class="android-title mdl-layout-title">
+            <h4 class="logo-font logo-font-main">PERGUNTAÍ!</h4>
+          </span>
+			<!-- Espaço em branco pra alinhar -->
+			<div class="perguntai-header-spacer mdl-layout-spacer"></div>
+			<!-- Navegação topo -->
+			<div class="android-navigation-container">
+				<nav class="android-navigation mdl-navigation">
+					<a class="mdl-navigation__link mdl-typography--text-uppercase" href="">Autenticar</a>
+				</nav>
+			</div>
+		</div>
+	</div>
+
+	<div class="perguntai-drawer mdl-layout__drawer">
+        <span class="mdl-layout-title">
+          <img class="perguntai-logo-image " th:src="@{/images/logo.jpeg }"/>
+        </span>
+		<nav class="mdl-navigation">
+			<a class="mdl-navigation__link" href="">Autenticar</a>
+		</nav>
+	</div>
+
+	<div class="mdl-layout__content">
+		<a name="top"></a>
+		<div class="slogan-section mdl-typography--text-center">
+			<div class="logo-font pergunta-sub-slogan">
+				A UFG dentro da sua casa
+			</div>
+		</div>
+
+
+		<div class="perguntai-more-section">
+
+
+			<div class="perguntai-card-container mdl-grid">
+
+
+				<div class="limiter">
+					<div class="container-login100">
+						<div class="wrap-login100">
+
+							<div class=" mdl-color--grey-100 ">
+								<form action="login" method="POST">
+									<main class="mdl-layout__content">
+										<div class="mdl-card mdl-shadow--6dp ">
+											<div class="mdl-typography--text-center mdl-typography--text-uppercase mdl-color--primary mdl-color-text--white">
+												<h2  class="logo-font logo-font-main" >Perguntaí</h2>
+											</div>
+											<div class="mdl-card__supporting-text">
+												<div class="mdl-textfield mdl-js-textfield">
+													<input class="mdl-textfield__input" type="text" id="username" name="username"/>
+													<label class="mdl-textfield__label" for="username">Usuário</label>
+												</div>
+												<div class="mdl-textfield mdl-js-textfield  ">
+													<input class="mdl-textfield__input " type="password" id="password" name="password"/>
+													<label class="mdl-textfield__label mdl-typography--text-center "  for="password">Senha</label>
+												</div>
+
+												<input type="hidden" th:name="${_csrf.parameterName}" th:value="${_csrf.token}"/>
+											</div>
+											<div class="mdl-card__actions mdl-card--border">
+												<button type="submit" class="mdl-button mdl-button--colored mdl-js-button mdl-js-ripple-effect">Entrar
+												</button>
+											</div>
+										</div>
+									</main>
+								</form>
+							</div>
+
+						</div>
+					</div>
+
+				</div>
+
+			</div>
+		</div>
+
+
+	</div>
+
+	<footer class="perguntai-footer mdl-mega-footer">
+
+		<div class="mdl-mega-footer--middle-section">
+			<p class="mdl-typography--font-light">© Universidade Federal de Goiás - UFG. Todos os
+				direitos reservados.</p>
+		</div>
+
+	</footer>
 </div>
 
+<script type="text/javascript" th:href="@{js/main.js}"></script>
+
 <script type="text/javascript"
-        th:src="@{/js/material.min.js}"/>
+		th:src="@{/js/material.min.js}"/>
 </body>
 </html>
