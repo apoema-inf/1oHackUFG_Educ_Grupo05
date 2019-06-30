@@ -88,6 +88,18 @@
     <orderEntry type="library" name="Maven: org.springframework.boot:spring-boot:1.5.21.RELEASE" level="project" />
     <orderEntry type="library" name="Maven: org.springframework.boot:spring-boot-autoconfigure:1.5.21.RELEASE" level="project" />
     <orderEntry type="library" scope="RUNTIME" name="Maven: org.postgresql:postgresql:9.4.1212.jre7" level="project" />
+    <orderEntry type="library" name="Maven: org.hibernate:hibernate-search-orm:5.8.2.Final" level="project" />
+    <orderEntry type="library" name="Maven: org.hibernate:hibernate-search-engine:5.8.2.Final" level="project" />
+    <orderEntry type="library" name="Maven: org.apache.lucene:lucene-core:5.5.5" level="project" />
+    <orderEntry type="library" name="Maven: org.apache.lucene:lucene-misc:5.5.5" level="project" />
+    <orderEntry type="library" name="Maven: org.apache.lucene:lucene-analyzers-common:5.5.5" level="project" />
+    <orderEntry type="library" name="Maven: org.apache.lucene:lucene-facet:5.5.5" level="project" />
+    <orderEntry type="library" name="Maven: org.apache.lucene:lucene-queries:5.5.5" level="project" />
+    <orderEntry type="library" name="Maven: org.apache.lucene:lucene-queryparser:5.5.5" level="project" />
+    <orderEntry type="library" name="Maven: org.jboss.logging:jboss-logging-processor:2.0.1.Final" level="project" />
+    <orderEntry type="library" name="Maven: org.jboss.logging:jboss-logging-annotations:2.0.1.Final" level="project" />
+    <orderEntry type="library" name="Maven: org.jboss.jdeparser:jdeparser:2.0.0.Final" level="project" />
+    <orderEntry type="library" name="Maven: javax.annotation:jsr250-api:1.0" level="project" />
     <orderEntry type="library" name="Maven: org.projectlombok:lombok:1.16.22" level="project" />
     <orderEntry type="library" scope="TEST" name="Maven: org.springframework.boot:spring-boot-starter-test:1.5.21.RELEASE" level="project" />
     <orderEntry type="library" scope="TEST" name="Maven: org.springframework.boot:spring-boot-test:1.5.21.RELEASE" level="project" />

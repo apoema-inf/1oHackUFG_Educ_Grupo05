@@ -13,7 +13,7 @@
   <!-- Page styles -->
   <link rel="stylesheet"
         href="https://fonts.googleapis.com/css?family=Roboto:regular,bold,italic,thin,light,bolditalic,black,medium&amp;lang=en"/>
-  <link href="https://fonts.googleapis.com/css?family=Anton&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css?family=Anton" rel="stylesheet"/>
   <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons"/>
   <link th:href="@{/css/material.min.css}" rel="stylesheet"/>
   <link th:href="@{/css/styles.css}" rel="stylesheet"/>
@@ -24,7 +24,7 @@
   <div class="perguntai-header mdl-layout__header mdl-layout__header--waterfall">
     <div class="mdl-layout__header-row">
           <span class="android-title mdl-layout-title">
-            <img class="android-logo-image" src="images/android-logo.png"/>
+            <h4 class="logo-font logo-font-main">PERGUNTAÍ!</h4>
           </span>
       <!-- Espaço em branco pra alinhar -->
       <div class="perguntai-header-spacer mdl-layout-spacer"></div>
@@ -34,18 +34,15 @@
           <a class="mdl-navigation__link mdl-typography--text-uppercase" href="">Autenticar</a>
         </nav>
       </div>
-      <span class="perguntai-mobile-title mdl-layout-title">
-            <img class="android-logo-image" src="images/android-logo.png"/>
-          </span>
     </div>
   </div>
 
-  <div class="android-drawer mdl-layout__drawer">
+  <div class="perguntai-drawer mdl-layout__drawer">
         <span class="mdl-layout-title">
-          <img class="android-logo-image" src="images/android-logo-white.png"/>
+          <img class="perguntai-logo-image" th:src="@{/images/logo.jpeg }"/>
         </span>
     <nav class="mdl-navigation">
-      <a class="mdl-navigation__link" href="">Sair</a>
+      <a class="mdl-navigation__link" href="">Autenticar</a>
     </nav>
   </div>
 
@@ -56,17 +53,19 @@
         A UFG dentro da sua casa
       </div>
     </div>
-    <div class="android-more-section">
-      <div class="perguntai-section-title mdl-typography--display-1-color-contrast">Selecione uma das
-        opções
+    <div class="perguntai-more-section">
+
+      <div class="mdl-grid">
+        <div class="mdl-cell--12-col">
+          <input type="text" class="search-bar" placeholder="Digite sua pesquisa..." />
+        </div>
       </div>
+
       <div class="perguntai-card-container mdl-grid">
-
-
         <div
             class="mdl-cell mdl-cell--6-col mdl-cell--6-col-tablet mdl-cell--6-col-phone mdl-card mdl-shadow--3dp">
           <div class="mdl-card__media">
-            <img src="images/more-from-2.png"/>
+            <img th:src="@{/images/busca-bg.png}"/>
           </div>
           <div class="mdl-card__title">
             <h4 class="mdl-card__title-text">Perguntas Recentes</h4>
@@ -75,7 +74,8 @@
             <span class="mdl-typography--font-light mdl-typography--subhead">Dê uma olhada nas perguntas já feitas, você poderá encontrar a resposta para sua pergunta</span>
           </div>
           <div class="mdl-card__actions">
-            <a class="android-link mdl-button mdl-js-button mdl-typography--text-uppercase" href="">
+            <a class="perguntai-link mdl-button mdl-js-button mdl-typography--text-uppercase"
+               href="">
               Verificar Perguntas Já feitas
               <i class="material-icons">chevron_right</i>
             </a>
@@ -85,7 +85,7 @@
         <div
             class="mdl-cell mdl-cell--6-col mdl-cell--6-col-tablet mdl-cell--6-col-phone mdl-card mdl-shadow--3dp">
           <div class="mdl-card__media">
-            <img src="images/more-from-3.png"/>
+            <img th:src="@{/images/explore-bg.png}"/>
           </div>
           <div class="mdl-card__title">
             <h4 class="mdl-card__title-text">Fazer nova Pergunta</h4>
@@ -94,7 +94,8 @@
             <span class="mdl-typography--font-light mdl-typography--subhead">Poxa, ainda não fizeram sua pergunta? Não tem problema, pode perguntar e iremos responder.</span>
           </div>
           <div class="mdl-card__actions">
-            <a class="android-link mdl-button mdl-js-button mdl-typography--text-uppercase" href="">
+            <a class="perguntai-link mdl-button mdl-js-button mdl-typography--text-uppercase"
+               href="">
               Fazer nova pergunta
               <i class="material-icons">chevron_right</i>
             </a>
@@ -103,15 +104,16 @@
       </div>
     </div>
 
-    <footer class="perguntai-footer mdl-mega-footer">
 
-      <div class="mdl-mega-footer--middle-section">
-        <p class="mdl-typography--font-light">© Universidade Federal de Goiás - UFG. Todos os
-          direitos reservados.</p>
-      </div>
-
-    </footer>
   </div>
+  <footer class="perguntai-footer mdl-mega-footer">
+
+    <div class="mdl-mega-footer--middle-section">
+      <p class="mdl-typography--font-light">© Universidade Federal de Goiás - UFG. Todos os
+        direitos reservados.</p>
+    </div>
+
+  </footer>
 </div>
 <script type="text/javascript"
         th:src="@{/js/material.min.js}"/>
