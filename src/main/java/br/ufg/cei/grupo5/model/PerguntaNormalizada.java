@@ -23,7 +23,6 @@ public class PerguntaNormalizada extends BasicModel {
   @Column
   private String titulo;
 
-  @Lob
   @Column
   private String pergunta;
 
