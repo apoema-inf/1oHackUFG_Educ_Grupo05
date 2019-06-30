@@ -23,88 +23,49 @@
 
   <div class="perguntai-header mdl-layout__header mdl-layout__header--waterfall">
     <div class="mdl-layout__header-row">
-          <span class="android-title mdl-layout-title">
-            <h4 class="logo-font logo-font-main">PERGUNTAÍ!</h4>
+          <span class="perguntai-title mdl-layout-title">
+            <a th:href="@{/index}" class="mdl-navigation__link"> <h4 class="logo-font logo-font-main">PERGUNTAÍ!</h4> </a>
           </span>
       <!-- Espaço em branco pra alinhar -->
       <div class="perguntai-header-spacer mdl-layout-spacer"></div>
       <!-- Navegação topo -->
       <div class="android-navigation-container">
         <nav class="android-navigation mdl-navigation">
-          <a class="mdl-navigation__link mdl-typography--text-uppercase" href="">Autenticar</a>
+          <a class="mdl-navigation__link mdl-typography--text-uppercase" th:href="@{/login}">Autenticar</a>
         </nav>
       </div>
     </div>
   </div>
 
-  <div class="perguntai-drawer mdl-layout__drawer">
+  <div class="android-drawer mdl-layout__drawer">
         <span class="mdl-layout-title">
           <img class="perguntai-logo-image" th:src="@{/images/logo.jpeg }"/>
         </span>
     <nav class="mdl-navigation">
-      <a class="mdl-navigation__link" href="">Autenticar</a>
+      <a class="mdl-navigation__link" th:href="@{/login}">Autenticar</a>
     </nav>
   </div>
 
-  <div class="mdl-layout__content">
-    <a name="top"></a>
-    <div class="slogan-section mdl-typography--text-center">
-      <div class="logo-font pergunta-sub-slogan">
-        A UFG dentro da sua casa
-      </div>
+  <div class="slogan-section mdl-typography--text-center">
+    <div class="logo-font pergunta-sub-slogan">
+      A UFG dentro da sua casa
     </div>
-    <div class="perguntai-more-section">
+  </div>
+  <div class="perguntai-more-section">
 
-      <div class="mdl-grid">
-        <div class="mdl-cell--12-col">
-          <input type="text" class="search-bar" placeholder="Digite sua pesquisa..." />
-        </div>
-      </div>
-
-      <div class="perguntai-card-container mdl-grid">
-        <div
-            class="mdl-cell mdl-cell--6-col mdl-cell--6-col-tablet mdl-cell--6-col-phone mdl-card mdl-shadow--3dp">
-          <div class="mdl-card__media">
-            <img th:src="@{/images/busca-bg.png}"/>
-          </div>
-          <div class="mdl-card__title">
-            <h4 class="mdl-card__title-text">Perguntas Recentes</h4>
-          </div>
-          <div class="mdl-card__supporting-text">
-            <span class="mdl-typography--font-light mdl-typography--subhead">Dê uma olhada nas perguntas já feitas, você poderá encontrar a resposta para sua pergunta</span>
-          </div>
-          <div class="mdl-card__actions">
-            <a class="perguntai-link mdl-button mdl-js-button mdl-typography--text-uppercase"
-               href="">
-              Verificar Perguntas Já feitas
-              <i class="material-icons">chevron_right</i>
-            </a>
-          </div>
-        </div>
-
-        <div
-            class="mdl-cell mdl-cell--6-col mdl-cell--6-col-tablet mdl-cell--6-col-phone mdl-card mdl-shadow--3dp">
-          <div class="mdl-card__media">
-            <img th:src="@{/images/explore-bg.png}"/>
-          </div>
-          <div class="mdl-card__title">
-            <h4 class="mdl-card__title-text">Fazer nova Pergunta</h4>
-          </div>
-          <div class="mdl-card__supporting-text">
-            <span class="mdl-typography--font-light mdl-typography--subhead">Poxa, ainda não fizeram sua pergunta? Não tem problema, pode perguntar e iremos responder.</span>
-          </div>
-          <div class="mdl-card__actions">
-            <a class="perguntai-link mdl-button mdl-js-button mdl-typography--text-uppercase"
-               href="">
-              Fazer nova pergunta
-              <i class="material-icons">chevron_right</i>
-            </a>
-          </div>
-        </div>
+    <div class="mdl-grid">
+      <div class="mdl-cell--12-col">
+        <form action="">
+          <input type="hidden" name="categoria" th:value="${categoria}"/>
+          <input type="hidden" name="page" th:value="${page}"/>
+          <input type="text" name="query" class="search-bar" placeholder="Digite sua pesquisa..."/>
+        </form>
       </div>
     </div>
 
+    <div layout:fragment="content" class="mdl-layout__content">
 
+    </div>
   </div>
   <footer class="perguntai-footer mdl-mega-footer">
 
@@ -115,8 +76,8 @@
 
   </footer>
 </div>
-<script type="text/javascript"
-        th:src="@{/js/material.min.js}"/>
 
 </body>
+<script type="text/javascript"
+        th:src="@{/js/material.min.js}"/>
 </html>

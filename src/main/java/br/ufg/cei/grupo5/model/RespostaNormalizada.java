@@ -19,6 +19,9 @@ public class RespostaNormalizada extends BasicModel {
   @Column
   private String resposta;
 
+  @Column
+  private String respostaPlana;
+
   @ManyToOne
   @JoinColumn(name = "resposta_original_id")
   private RespostaOriginal aluno;

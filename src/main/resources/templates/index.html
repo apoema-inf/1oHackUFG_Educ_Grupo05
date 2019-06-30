@@ -10,8 +10,51 @@
 
 <body class="fix-header fix-sidebar">
 <!-- Preloader - style you can find in spinners.css -->
-<div class="container" layout:fragment="content">
-  Aqui vai o conteúdo da home.
+
+<div layout:fragment="content" class="mdl-layout__content">
+
+
+  <div class="perguntai-card-container mdl-grid">
+    <div
+        class="mdl-cell mdl-cell--6-col mdl-cell--6-col-tablet mdl-cell--6-col-phone mdl-card mdl-shadow--3dp">
+      <div class="mdl-card__media">
+        <img th:src="@{/images/busca-bg.png}"/>
+      </div>
+      <div class="mdl-card__title">
+        <h4 class="mdl-card__title-text">Perguntas Recentes</h4>
+      </div>
+      <div class="mdl-card__supporting-text">
+        <span class="mdl-typography--font-light mdl-typography--subhead">Dê uma olhada nas perguntas já feitas, você poderá encontrar a resposta para sua pergunta</span>
+      </div>
+      <div class="mdl-card__actions">
+        <a class="perguntai-link mdl-button mdl-js-button mdl-typography--text-uppercase"
+           th:href="@{/perguntas-categorias}">
+          Verificar Perguntas Já feitas
+          <i class="material-icons">chevron_right</i>
+        </a>
+      </div>
+    </div>
+
+    <div
+        class="mdl-cell mdl-cell--6-col mdl-cell--6-col-tablet mdl-cell--6-col-phone mdl-card mdl-shadow--3dp">
+      <div class="mdl-card__media">
+        <img th:src="@{/images/explore-bg.png}"/>
+      </div>
+      <div class="mdl-card__title">
+        <h4 class="mdl-card__title-text">Fazer nova Pergunta</h4>
+      </div>
+      <div class="mdl-card__supporting-text">
+        <span class="mdl-typography--font-light mdl-typography--subhead">Poxa, ainda não fizeram sua pergunta? Não tem problema, pode perguntar e iremos responder.</span>
+      </div>
+      <div class="mdl-card__actions">
+        <a class="perguntai-link mdl-button mdl-js-button mdl-typography--text-uppercase">
+          Fazer nova pergunta
+          <i class="material-icons">chevron_right</i>
+        </a>
+      </div>
+    </div>
+  </div>
+
 </div>
 
 </body>

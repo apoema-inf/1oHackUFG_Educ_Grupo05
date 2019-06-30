@@ -48,6 +48,7 @@ input.search-bar:-ms-input-placeholder { /* Internet Explorer 10-11 */
   color: #337499;
 }
 
+
 .mdl-layout__drawer-button {
   display: none;
 }
@@ -461,16 +462,12 @@ input.search-bar:-ms-input-placeholder { /* Internet Explorer 10-11 */
     display: block;
   }
 
-  .android-title {
+  .perguntai-title {
     width: calc(100% - 42px);
   }
 
   .android-navigation-container {
     display: none;
-  }
-
-  .perguntai-title {
-    display: none !important;
   }
 
   .perguntai-mobile-title {

@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="pt-BR"
+      xmlns:th="http://www.thymeleaf.org"
+      xmlns:layout="http://www.ultraq.net.nz/thymeleaf/layout"
+      layout:decorator="layouts/default">
+
+<head>
+  <title>Home</title>
+</head>
+
+<body class="fix-header fix-sidebar">
+<!-- Preloader - style you can find in spinners.css -->
+
+<div layout:fragment="content" class="mdl-layout__content">
+  <div class="perguntai-card-container mdl-grid">
+    <div
+        class="mdl-cell mdl-cell--3-col mdl-cell--3-col-tablet mdl-cell--3-col-phone mdl-card mdl-shadow--3dp">
+      <div class="mdl-card__media">
+        <img th:src="@{/images/busca-bg.png}"/>
+      </div>
+      <div class="mdl-card__title">
+        <h4 class="mdl-card__title-text">Educação</h4>
+      </div>
+      <div class="mdl-card__supporting-text">
+        <span class="mdl-typography--font-light mdl-typography--subhead">Perguntas relacionadas a educação de base de diversas disciplinas, como matemática, português, hitórias, entre outras</span>
+      </div>
+      <div class="mdl-card__actions">
+        <a class="perguntai-link mdl-button mdl-js-button mdl-typography--text-uppercase"
+           th:href="@{/perguntas?categoria=EDUCACAO}">
+          Ir para Educação
+          <i class="material-icons">chevron_right</i>
+        </a>
+      </div>
+    </div>
+
+    <div
+        class="mdl-cell mdl-cell--3-col mdl-cell--3-col-tablet mdl-cell--3-col-phone mdl-card mdl-shadow--3dp">
+      <div class="mdl-card__media">
+        <img th:src="@{/images/busca-bg.png}"/>
+      </div>
+      <div class="mdl-card__title">
+        <h4 class="mdl-card__title-text">Sáude</h4>
+      </div>
+      <div class="mdl-card__supporting-text">
+        <span class="mdl-typography--font-light mdl-typography--subhead">Perguntas relacionadas a área da saúde e prevenção.</span>
+      </div>
+      <div class="mdl-card__actions">
+        <a class="perguntai-link mdl-button mdl-js-button mdl-typography--text-uppercase"
+           th:href="@{/perguntas?categoria=SAUDE}">
+          Ir para Saúde
+          <i class="material-icons">chevron_right</i>
+        </a>
+      </div>
+    </div>
+
+    <div
+        class="mdl-cell mdl-cell--3-col mdl-cell--3-col-tablet mdl-cell--3-col-phone mdl-card mdl-shadow--3dp">
+      <div class="mdl-card__media">
+        <img th:src="@{/images/busca-bg.png}"/>
+      </div>
+      <div class="mdl-card__title">
+        <h4 class="mdl-card__title-text">Tecnologia</h4>
+      </div>
+      <div class="mdl-card__supporting-text">
+        <span class="mdl-typography--font-light mdl-typography--subhead">Perguntas relacionadas a área tecnologia.</span>
+      </div>
+      <div class="mdl-card__actions">
+        <a class="perguntai-link mdl-button mdl-js-button mdl-typography--text-uppercase"
+           th:href="@{/perguntas?categoria=TECNOLOGIA}">
+          Ir para Tecnologia
+          <i class="material-icons">chevron_right</i>
+        </a>
+      </div>
+    </div>
+
+    <div
+        class="mdl-cell mdl-cell--3-col mdl-cell--3-col-tablet mdl-cell--3-col-phone mdl-card mdl-shadow--3dp">
+      <div class="mdl-card__media">
+        <img th:src="@{/images/busca-bg.png}"/>
+      </div>
+      <div class="mdl-card__title">
+        <h4 class="mdl-card__title-text">Cotidiano</h4>
+      </div>
+      <div class="mdl-card__supporting-text">
+        <span class="mdl-typography--font-light mdl-typography--subhead">Perguntas relacionadas ao cotidiano, como: por que o chuveiro elétrico consome muita energia?.</span>
+      </div>
+      <div class="mdl-card__actions">
+        <a class="perguntai-link mdl-button mdl-js-button mdl-typography--text-uppercase"
+           th:href="@{/perguntas?categoria=COTIDIANO}">
+          Ir para Cotidiano
+          <i class="material-icons">chevron_right</i>
+        </a>
+      </div>
+    </div>
+
+  </div>
+</div>
+</body>
+</html>
