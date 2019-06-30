@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="pt-BR"
+      xmlns:th="http://www.thymeleaf.org"
+      xmlns:layout="http://www.ultraq.net.nz/thymeleaf/layout"
+      layout:decorator="layouts/default">
+
+<head>
+  <title>Home</title>
+</head>
+
+<body class="fix-header fix-sidebar">
+<!-- Preloader - style you can find in spinners.css -->
+
+<div layout:fragment="content" class="mdl-layout__content">
+
+
+  <div class="perguntai-card-container mdl-grid">
+    <div
+        class="mdl-cell mdl-cell--12-col mdl-cell--12-col-tablet mdl-cell--12-col-phone mdl-card mdl-shadow--3dp" style="background: rgba(239,169,63,0.25); min-height: 0px;">
+      <div class="mdl-card__title">
+        <h4 class="mdl-card__title-text">Faça sua pergunta</h4>
+      </div>
+      <div class="mdl-card__supporting-text" style="padding-bottom: 8px !important;">
+        <span class="mdl-typography--font-light mdl-typography--subhead">Não se preocupe com o texto, nossas equipe de moderadores vai avaliar a sua pergunta e verificar qualquer inconformidade antes de públicar as respostas</span>
+      </div>
+    </div>
+  </div>
+
+  <div class="perguntai-card-container mdl-grid">
+    <div
+        class="mdl-cell mdl-cell--12-col mdl-cell--12-col-tablet mdl-cell--12-col-phone mdl-card mdl-shadow--3dp" style="background: rgba(51,116,153,0.44);">
+      <div id="editor">
+
+      </div>
+
+      <div class="mdl-card__actions">
+        <form action="/enviar-pergunta" method="POST">
+          <input id="textContent" name="textContent" type="hidden" />
+          <input type="hidden" th:name="${_csrf.parameterName}" th:value="${_csrf.token}"/>
+          <button class="perguntai-link mdl-button mdl-js-button mdl-typography--text-uppercase">
+            Fazer nova pergunta
+            <i class="material-icons">chevron_right</i>
+          </button>
+        </form>
+      </div>
+    </div>
+  </div>
+</div>
+
+<th:block layout:fragment="myScript">
+  <script type="text/javascript"
+          th:src="@{/js/quill.min.js}"/>
+
+  <script>
+    var quill = new Quill('#editor', {
+      theme: 'snow'
+    });
+
+    quill.on('text-change', function(delta, oldDelta, source) {
+      document.getElementById("textContent").value = quill.getText();
+    });
+  </script>
+
+</th:block>
+
+<th:block layout:fragment="myCss">
+  <link th:href="@{/css/quill.core.css}" rel="stylesheet"/>
+  <link th:href="@{/css/quill.snow.css}" rel="stylesheet"/>
+</th:block>
+
+</body>
+
+</html>

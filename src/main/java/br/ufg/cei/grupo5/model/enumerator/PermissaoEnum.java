@@ -6,6 +6,6 @@ package br.ufg.cei.grupo5.model.enumerator;
  */
 public enum PermissaoEnum {
 
-  ADMIN, COMUNIDADE, PROFESSOR, ALUNO;
+  ADMIN, COMUNIDADE, PROFESSOR, ALUNO, MODERADOR;
 
 }

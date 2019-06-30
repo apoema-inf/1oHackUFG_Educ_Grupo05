@@ -3,6 +3,7 @@ package br.ufg.cei.grupo5.model;
 import javax.persistence.Column;
 import javax.persistence.Entity;
 import javax.persistence.JoinColumn;
+import javax.persistence.Lob;
 import javax.persistence.ManyToOne;
 import javax.persistence.Table;
 import lombok.Data;
@@ -16,6 +17,7 @@ import lombok.Data;
 @Table(name = "respostas_originais")
 public class RespostaOriginal extends BasicModel {
 
+  @Lob
   @Column
   private String resposta;
 

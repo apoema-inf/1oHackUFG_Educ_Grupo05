@@ -15,7 +15,7 @@
 
 
   <div class="perguntai-card-container mdl-grid">
-    <th:block th:each="pergunta : ${perguntas}">
+    <th:block th:if="${perguntas != null}" th:each="pergunta : ${perguntas}">
       <div
           class="mdl-cell mdl-cell--12-col mdl-cell--12-col-tablet mdl-cell--12-col-phone mdl-card mdl-shadow--3dp">
         <div class="mdl-card__title">
@@ -28,6 +28,25 @@
           <a class="perguntai-link mdl-button mdl-js-button mdl-typography--text-uppercase"
              th:href="@{/resposta?pergunta=${pergunta.id}}">
             Visualizar Resposta
+            <i class="material-icons">chevron_right</i>
+          </a>
+        </div>
+      </div>
+    </th:block>
+
+    <th:block th:if="${perguntas == null}" >
+      <div
+          class="mdl-cell mdl-cell--12-col mdl-cell--12-col-tablet mdl-cell--12-col-phone mdl-card mdl-shadow--3dp">
+        <div class="mdl-card__title">
+          <h4 class="mdl-card__title-text">Nenhuma Pergunta ou Resposta Encontrada</h4>
+        </div>
+        <div class="mdl-card__supporting-text">
+          <span class="mdl-typography--font-light mdl-typography--subhead">Sua pesquisa não retornou resultados, mas você pode realixar uma nova pergunta!</span>
+        </div>
+        <div class="mdl-card__actions">
+          <a class="perguntai-link mdl-button mdl-js-button mdl-typography--text-uppercase"
+             th:href="@{/fazer-pergunta}">
+            Fazer nova Pergunta
             <i class="material-icons">chevron_right</i>
           </a>
         </div>

@@ -17,6 +17,7 @@
   <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons"/>
   <link th:href="@{/css/material.min.css}" rel="stylesheet"/>
   <link th:href="@{/css/styles.css}" rel="stylesheet"/>
+  <th:block layout:fragment="myCss" />
 </head>
 <body>
 <div class="mdl-layout mdl-js-layout mdl-layout--fixed-header">
@@ -24,7 +25,8 @@
   <div class="perguntai-header mdl-layout__header mdl-layout__header--waterfall">
     <div class="mdl-layout__header-row">
           <span class="perguntai-title mdl-layout-title">
-            <a th:href="@{/index}" class="mdl-navigation__link"> <h4 class="logo-font logo-font-main">PERGUNTAÍ!</h4> </a>
+            <a th:href="@{/index}" class="mdl-navigation__link"> <h4
+                class="logo-font logo-font-main">PERGUNTAÍ!</h4> </a>
           </span>
       <!-- Espaço em branco pra alinhar -->
       <div class="perguntai-header-spacer mdl-layout-spacer"></div>
@@ -55,7 +57,7 @@
 
     <div class="mdl-grid">
       <div class="mdl-cell--12-col">
-        <form action="">
+        <form action="/perguntas" method="GET">
           <input type="hidden" name="categoria" th:value="${categoria}"/>
           <input type="hidden" name="page" th:value="${page}"/>
           <input type="text" name="query" class="search-bar" placeholder="Digite sua pesquisa..."/>
@@ -80,4 +82,5 @@
 </body>
 <script type="text/javascript"
         th:src="@{/js/material.min.js}"/>
+<th:block layout:fragment="myScript"/>
 </html>

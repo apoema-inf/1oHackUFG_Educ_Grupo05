@@ -34,9 +34,13 @@ public class PerguntaNormalizadaController {
       if (StringUtils.isEmpty(query)) {
         model.addAttribute("perguntas",
             perguntaNormalizadaRepository.findByCategoria(CategoriaEnum.valueOf(categoria)));
-      } else {
-        model.addAttribute("perguntas",
-            servicoBusca.getPerguntasPesquisa(query, page, CategoriaEnum.valueOf(categoria)));
+      } else if (StringUtils.isEmpty(categoria)) {
+        try {
+          model.addAttribute("perguntas",
+              servicoBusca.getPerguntasPesquisa(query, page, CategoriaEnum.valueOf(categoria)));
+        } catch (Exception e) {
+          e.printStackTrace();
+        }
       }
     } catch (Exception e) {
       e.printStackTrace();
