@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="UTF-8">
+    <title>Entrar</title>
+</head>
+<body>
+    <div th:if="&{param.erro}">
+        Sua senha ou nome não estão corretos, tente outra de novo.
+    </div>
+
+    <div th:if="&{param.logout}">
+        Até mais, volte sempre....
+    </div>
+
+    <div class="container" th:if="&{param.login}">
+        <label for="uname"><b>Username</b></label>
+        <input type="text" placeholder="Qual é o seu nome de usuário? " name="uname" required>
+
+        <label for="psw"><b>Password</b></label>
+        <input type="password" placeholder="E a sua senha?" name="psw" required>
+
+        <button type="submit">Entrar e perguntar.</button>
+        <label>
+            <input type="checkbox" checked="checked" name="remember"> Eu não lembro a senha...
+        </label>
+    </div>
+
+</body>
+</html>
