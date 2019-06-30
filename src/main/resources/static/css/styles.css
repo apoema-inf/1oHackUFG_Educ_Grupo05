@@ -537,3 +537,17 @@ input.search-bar:-ms-input-placeholder { /* Internet Explorer 10-11 */
     display: none;
   }
 }
+
+
+
+ .login-card-wide.mdl-card {
+   width: 512px;
+ }
+
+.login-card-wide > .mdl-card__title {
+  color: #fff;
+  height: 176px;
+}
+.login-card-wide > .mdl-card__menu {
+  color: #fff;
+}
