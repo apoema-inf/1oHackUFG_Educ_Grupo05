@@ -1,0 +1,120 @@
+<!doctype html>
+<html lang="pt-BR"
+      xmlns:th="http://www.thymeleaf.org"
+      xmlns:layout="http://www.ultraq.net.nz/thymeleaf/layout">
+
+<head>
+  <meta charset="utf-8"/>
+  <meta http-equiv="X-UA-Compatible" content="IE=edge"/>
+  <meta name="description" content="Perguntaí"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0"/>
+  <title>Perguntaí</title>
+
+  <!-- Page styles -->
+  <link rel="stylesheet"
+        href="https://fonts.googleapis.com/css?family=Roboto:regular,bold,italic,thin,light,bolditalic,black,medium&amp;lang=en"/>
+  <link href="https://fonts.googleapis.com/css?family=Anton&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons"/>
+  <link th:href="@{/css/material.min.css}" rel="stylesheet"/>
+  <link th:href="@{/css/styles.css}" rel="stylesheet"/>
+</head>
+<body>
+<div class="mdl-layout mdl-js-layout mdl-layout--fixed-header">
+
+  <div class="perguntai-header mdl-layout__header mdl-layout__header--waterfall">
+    <div class="mdl-layout__header-row">
+          <span class="android-title mdl-layout-title">
+            <img class="android-logo-image" src="images/android-logo.png"/>
+          </span>
+      <!-- Espaço em branco pra alinhar -->
+      <div class="perguntai-header-spacer mdl-layout-spacer"></div>
+      <!-- Navegação topo -->
+      <div class="android-navigation-container">
+        <nav class="android-navigation mdl-navigation">
+          <a class="mdl-navigation__link mdl-typography--text-uppercase" href="">Autenticar</a>
+        </nav>
+      </div>
+      <span class="perguntai-mobile-title mdl-layout-title">
+            <img class="android-logo-image" src="images/android-logo.png"/>
+          </span>
+    </div>
+  </div>
+
+  <div class="android-drawer mdl-layout__drawer">
+        <span class="mdl-layout-title">
+          <img class="android-logo-image" src="images/android-logo-white.png"/>
+        </span>
+    <nav class="mdl-navigation">
+      <a class="mdl-navigation__link" href="">Sair</a>
+    </nav>
+  </div>
+
+  <div class="mdl-layout__content">
+    <a name="top"></a>
+    <div class="slogan-section mdl-typography--text-center">
+      <div class="logo-font pergunta-sub-slogan">
+        A UFG dentro da sua casa
+      </div>
+    </div>
+    <div class="android-more-section">
+      <div class="perguntai-section-title mdl-typography--display-1-color-contrast">Selecione uma das
+        opções
+      </div>
+      <div class="perguntai-card-container mdl-grid">
+
+
+        <div
+            class="mdl-cell mdl-cell--6-col mdl-cell--6-col-tablet mdl-cell--6-col-phone mdl-card mdl-shadow--3dp">
+          <div class="mdl-card__media">
+            <img src="images/more-from-2.png"/>
+          </div>
+          <div class="mdl-card__title">
+            <h4 class="mdl-card__title-text">Perguntas Recentes</h4>
+          </div>
+          <div class="mdl-card__supporting-text">
+            <span class="mdl-typography--font-light mdl-typography--subhead">Dê uma olhada nas perguntas já feitas, você poderá encontrar a resposta para sua pergunta</span>
+          </div>
+          <div class="mdl-card__actions">
+            <a class="android-link mdl-button mdl-js-button mdl-typography--text-uppercase" href="">
+              Verificar Perguntas Já feitas
+              <i class="material-icons">chevron_right</i>
+            </a>
+          </div>
+        </div>
+
+        <div
+            class="mdl-cell mdl-cell--6-col mdl-cell--6-col-tablet mdl-cell--6-col-phone mdl-card mdl-shadow--3dp">
+          <div class="mdl-card__media">
+            <img src="images/more-from-3.png"/>
+          </div>
+          <div class="mdl-card__title">
+            <h4 class="mdl-card__title-text">Fazer nova Pergunta</h4>
+          </div>
+          <div class="mdl-card__supporting-text">
+            <span class="mdl-typography--font-light mdl-typography--subhead">Poxa, ainda não fizeram sua pergunta? Não tem problema, pode perguntar e iremos responder.</span>
+          </div>
+          <div class="mdl-card__actions">
+            <a class="android-link mdl-button mdl-js-button mdl-typography--text-uppercase" href="">
+              Fazer nova pergunta
+              <i class="material-icons">chevron_right</i>
+            </a>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <footer class="perguntai-footer mdl-mega-footer">
+
+      <div class="mdl-mega-footer--middle-section">
+        <p class="mdl-typography--font-light">© Universidade Federal de Goiás - UFG. Todos os
+          direitos reservados.</p>
+      </div>
+
+    </footer>
+  </div>
+</div>
+<script type="text/javascript"
+        th:src="@{/js/material.min.js}"/>
+
+</body>
+</html>
